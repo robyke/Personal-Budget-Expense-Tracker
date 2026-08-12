@@ -1,42 +1,183 @@
-/* Basic page styling using an element selector */
+/* Makes sizing easier to control */
+* {
+    box-sizing: border-box;
+}
+
+/* Styles the whole page */
 body {
     font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #f4f4f4;
+    margin: 0;
+    background-color: #f4f6f5;
+    color: #333333;
+}
+
+/* Main page header */
+.page-header {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Direct child selector */
+.page-header > img {
+    margin-bottom: 5px;
 }
 
 /* Element selector */
 h1 {
-    text-align: center;
-    font-size: 36px;
+    font-size: 38px;
+    margin: 10px 0;
 }
 
 /* Class selector */
 .intro {
-    text-align: center;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
-/* ID selector */
+/* Main content */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Add Expense section */
 #add-expense {
     background-color: white;
-    padding: 20px;
+    padding: 25px;
+    border-radius: 10px;
     margin-bottom: 20px;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Direct child selector */
+form > label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+/* Negation pseudo-class */
+input:not([type="submit"]) {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Dropdown */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* Focus state */
+input:focus,
+select:focus {
+    border-color: #2e7d32;
+    outline: 2px solid #c8e6c9;
+}
+
+/* Add Expense button */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+
+    /* Required interactive cursor */
+    cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Details section */
+.instructions {
+    background-color: #e8f5e9;
+    padding: 18px;
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-/* Element selector */
-input {
-    display: block;
-    width: 95%;
-    padding: 10px;
-    margin: 8px 0 15px 0;
+.instructions summary {
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Class selector */
+/* Expenses section */
 .expenses-section {
-    background-color: #e8e8e8;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Descendant selector */
+.expenses-section th,
+.expenses-section td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Colored table header */
+thead {
+    background-color: #2e7d32;
+    color: white;
+}
+
+/* Position-based pseudo-class */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: #dcedc8;
+}
+
+/* Video section */
+.video-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Prevent video from overflowing smaller screens */
+iframe {
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 18px;
+    margin-top: 30px;
 }
