@@ -1,54 +1,93 @@
-/* Makes sizing easier to control */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* Color palette */
+:root {
+    --primary: #1f5f4a;
+    --primary-dark: #164536;
+    --accent: #d9a441;
+    --background: #f4f7f5;
+    --card: #ffffff;
+    --soft-green: #e8f2ed;
+    --border: #d7dfda;
+    --text: #24312b;
+    --muted: #68756f;
+}
+
+/* Box model reset */
 * {
     box-sizing: border-box;
 }
 
-/* Styles the whole page */
+/* Whole page */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f6f5;
-    color: #333333;
-}
-
-/* Main page header */
-.page-header {
-    background-color: #2e7d32;
-    color: white;
-    text-align: center;
     padding: 30px 20px;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Direct child selector */
-.page-header > img {
-    margin-bottom: 5px;
-}
-
-/* Element selector */
-h1 {
-    font-size: 38px;
-    margin: 10px 0;
-}
-
-/* Class selector */
-.intro {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-/* Main content */
+/* Main content width */
 main {
     width: 90%;
-    max-width: 900px;
-    margin: 30px auto;
+    max-width: 950px;
+    margin: 0 auto;
 }
 
-/* Add Expense section */
-#add-expense {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
+/* Page heading card */
+.page-header {
+    width: 90%;
+    max-width: 950px;
+    margin: 0 auto 30px auto;
+    padding: 35px 25px;
+    text-align: center;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+/* Logo */
+.page-header > img {
+    margin-bottom: 8px;
+}
+
+/* Heading typography */
+h1,
+h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+}
+
+h1 {
+    margin: 5px 0 10px;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 0;
     margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Intro text */
+.intro {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+/* Add Expense card */
+#add-expense {
+    background-color: var(--card);
+    margin-bottom: 25px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
 }
 
 /* Form layout */
@@ -57,127 +96,165 @@ form {
     flex-direction: column;
 }
 
-/* Direct child selector */
+/* Form labels */
 form > label {
-    font-weight: bold;
-    margin-top: 15px;
+    margin-top: 14px;
     margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text);
 }
 
-/* Negation pseudo-class */
-input:not([type="submit"]) {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #bbbbbb;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Dropdown */
+/* Inputs and dropdown */
+input:not([type="submit"]),
 select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #bbbbbb;
-    border-radius: 5px;
+    padding: 12px 14px;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    background-color: white;
+    color: var(--text);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
 }
 
 /* Focus state */
 input:focus,
 select:focus {
-    border-color: #2e7d32;
-    outline: 2px solid #c8e6c9;
+    border-color: var(--primary);
+    outline: 3px solid var(--soft-green);
 }
 
 /* Add Expense button */
 button {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #2e7d32;
+    margin-top: 22px;
+    padding: 13px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--primary);
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-
-    /* Required interactive cursor */
+    border-radius: 8px;
     cursor: pointer;
 }
 
 /* Button hover */
 button:hover {
-    background-color: #1b5e20;
+    background-color: var(--primary-dark);
 }
 
-/* Details section */
+/* Instructions card */
 .instructions {
-    background-color: #e8f5e9;
-    padding: 18px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 18px 22px;
+    background-color: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 10px;
 }
 
 .instructions summary {
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--primary);
     cursor: pointer;
 }
 
-/* Expenses section */
+/* Expense Table card */
 .expenses-section {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
     margin-bottom: 25px;
+    padding: 30px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
 }
 
 /* Table */
 table {
     width: 100%;
     border-collapse: collapse;
+    overflow: hidden;
 }
 
-/* Descendant selector */
+/* Table cells */
 .expenses-section th,
 .expenses-section td {
-    border: 1px solid #dddddd;
-    padding: 12px;
+    padding: 14px;
+    border: 1px solid var(--border);
     text-align: left;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Colored table header */
+/* Table header */
 thead {
-    background-color: #2e7d32;
+    background-color: var(--primary);
     color: white;
 }
 
-/* Position-based pseudo-class */
+th {
+    font-weight: 600;
+}
+
+/* Alternating rows */
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--soft-green);
 }
 
-/* Row hover effect */
+/* Table hover */
 tbody tr:hover {
-    background-color: #dcedc8;
+    background-color: #dcebe3;
 }
 
-/* Video section */
+/* Video card */
 .video-section {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 30px;
     text-align: center;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
 }
 
-/* Prevent video from overflowing smaller screens */
 iframe {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 /* Footer */
 footer {
+    width: 90%;
+    max-width: 950px;
+    margin: 30px auto 0;
+    padding: 20px;
     text-align: center;
-    background-color: #263238;
+    background-color: var(--primary-dark);
     color: white;
-    padding: 18px;
-    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    main,
+    .page-header,
+    footer {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #add-expense,
+    .expenses-section,
+    .video-section {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 14px;
+    }
 }
