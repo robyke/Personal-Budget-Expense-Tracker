@@ -20,7 +20,6 @@ The expense table contains columns for Name, Amount, Category, and Date. Five sa
 The form contains fields for the expense name, amount, category, and date. The category field uses a dropdown with Food, Transport, Rent, Entertainment, and Other options. The Add Expense button is currently visual only because JavaScript will be added later.
 
 ## Multimedia and Interactivity
-# Personal Budget & Expense Tracker
 
 ## Week 3: Visual Design Challenge
 
